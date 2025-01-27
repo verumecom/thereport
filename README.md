@@ -1,22 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Necklace Image Generation Development Report
+
+This website presents a comprehensive report on AI necklace image generation development, including:
+- Current limitations and challenges
+- Past successful projects
+- Ongoing research
+- Current operation progress
+
+## Tech Stack
+- Next.js
+- React
+- Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
+Then, run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) to view the report.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
