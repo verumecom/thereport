@@ -1,7 +1,13 @@
 'use client';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation'
 
 export default function ResumePage() {
+  const pathname = usePathname()
+  const basePath = process.env.NODE_ENV === 'production' ? '/thereport' : ''
+  
+  const imagePath = (path) => `${basePath}${path}`
+
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
@@ -105,11 +111,11 @@ export default function ResumePage() {
                 </div>
                 <div 
                   className="aspect-square rounded-2xl bg-muted/50 overflow-hidden cursor-pointer group/image relative shadow-lg transition-all duration-300 ease-out hover:shadow-xl"
-                  onClick={() => setSelectedImage("/data/Spiky silver wide_0193d3e1-0d01-766a-a5a3-1d963637223f.original.00_00_00_11.Still001.png")}
+                  onClick={() => setSelectedImage(imagePath("/data/Spiky silver wide_0193d3e1-0d01-766a-a5a3-1d963637223f.original.00_00_00_11.Still001.png"))}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300" />
                   <img
-                    src="/data/Spiky silver wide_0193d3e1-0d01-766a-a5a3-1d963637223f.original.00_00_00_11.Still001.png"
+                    src={imagePath("/data/Spiky silver wide_0193d3e1-0d01-766a-a5a3-1d963637223f.original.00_00_00_11.Still001.png")}
                     alt="Dataset used for training"
                     className="w-full h-full object-contain bg-black/50 transition-transform duration-500 ease-out group-hover/image:scale-[1.02]"
                   />
@@ -132,11 +138,11 @@ export default function ResumePage() {
                 </div>
                 <div 
                   className="aspect-square rounded-2xl bg-muted/50 overflow-hidden cursor-pointer group/image relative shadow-lg transition-all duration-300 ease-out hover:shadow-xl"
-                  onClick={() => setSelectedImage("/data/LoRa_00022_.png")}
+                  onClick={() => setSelectedImage(imagePath("/data/LoRa_00022_.png"))}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300" />
                   <img
-                    src="/data/LoRa_00022_.png"
+                    src={imagePath("/data/LoRa_00022_.png")}
                     alt="First image created by AI"
                     className="w-full h-full object-contain bg-black/50 transition-transform duration-500 ease-out group-hover/image:scale-[1.02]"
                   />
@@ -159,11 +165,11 @@ export default function ResumePage() {
                 </div>
                 <div 
                   className="aspect-square rounded-2xl bg-muted/50 overflow-hidden cursor-pointer group/image relative shadow-lg transition-all duration-300 ease-out hover:shadow-xl"
-                  onClick={() => setSelectedImage("/data/Gold.png")}
+                  onClick={() => setSelectedImage(imagePath("/data/Gold.png"))}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300" />
                   <img
-                    src="/data/Gold.png"
+                    src={imagePath("/data/Gold.png")}
                     alt="Final result"
                     className="w-full h-full object-contain bg-black/50 transition-transform duration-500 ease-out group-hover/image:scale-[1.02]"
                   />
@@ -222,11 +228,11 @@ export default function ResumePage() {
                 </div>
                 <div 
                   className="aspect-square rounded-2xl bg-muted/50 overflow-hidden cursor-pointer group/image relative shadow-lg transition-all duration-300 ease-out hover:shadow-xl"
-                  onClick={() => setSelectedImage("/data/7.png")}
+                  onClick={() => setSelectedImage(imagePath("/data/7.png"))}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300" />
                   <img
-                    src="/data/7.png"
+                    src={imagePath("/data/7.png")}
                     alt="Necklace area image"
                     className="w-full h-full object-contain bg-black/50 transition-transform duration-500 ease-out group-hover/image:scale-[1.02]"
                   />
