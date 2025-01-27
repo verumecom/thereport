@@ -1,14 +1,10 @@
-'use client';
-
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { metadata } from './metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'AI Necklace Image Generation Report - Development',
-  description: 'Development report for AI necklace image generation project',
-};
+export { metadata };
 
 export default function RootLayout({ children }) {
   return (
