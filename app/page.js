@@ -5,7 +5,7 @@ export default function ResumePage() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+    <main className="min-h-screen bg-gradient-to-b from-background to-muted">
       {/* Lightbox */}
       {selectedImage && (
         <div 
@@ -13,7 +13,7 @@ export default function ResumePage() {
           onClick={() => setSelectedImage(null)}
         >
           <button 
-            className="absolute top-4 right-4 text-white hover:text-muted p-2"
+            className="absolute top-4 right-4 text-white hover:text-muted-foreground p-2"
             onClick={() => setSelectedImage(null)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -29,10 +29,10 @@ export default function ResumePage() {
         </div>
       )}
 
-      <div className="container max-w-7xl mx-auto px-4 py-16 space-y-24">
+      <div className="container mx-auto px-4 py-16 space-y-24">
         {/* Header */}
-        <div className="text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">
+        <header className="text-center space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
             AI Necklace Image Generation Development Report
           </h1>
           <p className="text-xl text-muted-foreground">
@@ -42,7 +42,7 @@ export default function ResumePage() {
               day: 'numeric'
             })}
           </p>
-        </div>
+        </header>
 
         {/* Main Limitation - Hero Section */}
         <section className="relative">
@@ -392,6 +392,6 @@ export default function ResumePage() {
           </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
